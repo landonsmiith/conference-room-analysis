@@ -9,8 +9,8 @@ import plotly.graph_objects as go
 # Load and preprocess the data
 @st.cache_data
 def load_data():
-    confroom_data = pd.read_excel("C://Users//Landon//Downloads//confrooms.xlsx")
-    headshots_data = pd.read_csv("C://Users//Landon//Downloads//student_headshots.csv")  # Columns: Name, Address
+    confroom_data = pd.read_excel("data/confrooms.xlsx")
+    headshots_data = pd.read_csv("data/student_headshots.csv") 
     
     # Standardize 'Name' columns
     confroom_data['Name'] = confroom_data['Name'].str.strip().str.title()
