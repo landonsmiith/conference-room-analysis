@@ -48,8 +48,7 @@ menu = st.sidebar.selectbox("Select Analysis Section", ["Home", "Room Statistics
 st.sidebar.markdown("---")  
 st.sidebar.subheader("About the Author")
 st.sidebar.write("""
-    Hi, I'm Landon Smith, a data enthusiast with a passion for 
-    analytics, visualization, and storytelling. Learn more about me and view the code for this project below!
+    Hi, I'm Landon Smith, a data enthusiast passionate about transforming complex insights into compelling stories that resonate with all audiences. Learn more about me and view the code for this project below!
 """)
 
 st.sidebar.markdown("""
@@ -367,7 +366,6 @@ elif menu == "Time-Based Statistics":
             x='DayOfWeek',
             y='Counts',
             text='Counts',
-            title="Most Popular Days for Bookings",
             labels={'Counts': 'Number of Bookings', 'DayOfWeek': 'Day of the Week'}
         )
         fig.update_traces(marker=dict(color='#780606'))
