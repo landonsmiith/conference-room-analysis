@@ -48,7 +48,10 @@ menu = st.sidebar.selectbox("Select Analysis Section", ["Home", "Room Statistics
 st.sidebar.markdown("---")  
 st.sidebar.subheader("About the Author")
 st.sidebar.write("""
-    Hi! I'm Landon Smith, a data enthusiast who loves turning analytics into stories that anyone can understand and enjoy. Learn more about me and view the code for this project below!
+    Hi, I'm Landon Smith, a data enthusiast who loves turning analytics into stories that **anyone** can understand and enjoy.
+""")
+st.sidebar.write("""
+    Learn more about me and view the code for this project below!
 """)
 
 st.sidebar.markdown("""
