@@ -5,3 +5,5 @@ plotly
 seaborn
 scikit-learn
 matplotlib
+fsspec
+openpyxl
