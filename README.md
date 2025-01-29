@@ -17,7 +17,7 @@ This repository contains the source code for the app, along with the necessary d
 - **Time-Based Statistics**:
   - Analyze booking trends by time slots and days of the week.
   - Compare cumulative bookings between floors over time.
-- **Cluster Analysis**:
+- **Neighbor Analysis**:
   - Visualize student booking patterns using PCA and K-Nearest Neighbors clustering.
 
 ## **Data Files**
