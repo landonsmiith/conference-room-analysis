@@ -42,7 +42,7 @@ df = load_data()
 
 # Sidebar Navigation
 st.sidebar.title("Conference Room Analysis")
-menu = st.sidebar.selectbox("Select Analysis Section", ["Home", "Room Statistics", "Student Statistics", "Time-Based Statistics", "Cluster Analysis"])
+menu = st.sidebar.selectbox("Select Analysis Section", ["Home", "Room Statistics", "Student Statistics", "Time-Based Statistics", "Neighbor Analysis"])
 
 # About the Author 
 st.sidebar.markdown("---")  
@@ -81,7 +81,7 @@ if menu == "Home":
       standout students, such as the **Most Valuable Booker** or the **Early Bird Award**.
     - **Time-Based Statistics**: Analyze booking trends over time, including cumulative floor-wise bookings 
       and popular days of the week.
-    - **Cluster Analysis**: Check out what students are most similar in their booking patterns, thanks to k-nearest neighbors methods.
+    - **Neighbor Analysis**: Check out what students are most similar in their booking patterns, thanks to k-nearest neighbors methods.
     """)
 
     st.subheader("About the Data")
@@ -430,9 +430,9 @@ elif menu == "Time-Based Statistics":
         )
         st.plotly_chart(fig)
 
-# Cluster Analysis Section
-elif menu == "Cluster Analysis":
-    st.header("Cluster Analysis")
+# Neighbor Analysis Section
+elif menu == "Neighbor Analysis":
+    st.header("Neighbor Analysis")
     
     import pandas as pd
     import numpy as np
@@ -457,7 +457,7 @@ elif menu == "Cluster Analysis":
     student_data['PCA1'] = pca_data[:, 0]
     student_data['PCA2'] = pca_data[:, 1]
 
-    # KNN clustering
+    # KNN graph
     knn = NearestNeighbors(n_neighbors=5)
     knn.fit(pca_data)
     distances, indices = knn.kneighbors(pca_data)
